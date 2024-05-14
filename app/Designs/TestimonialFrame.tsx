@@ -13,7 +13,7 @@ const TestimonialFrame: React.FC<{ testData: TestData[] }> = ({ testData }) => {
         {testData.map((test) => (
           <div
             key={test.id}
-            className="flex z-50 hover:scale-110 smooth flex-col gap-4 h-auto w-auto p-4 rounded-md shadow-2xl dark:bg-slate-900 bg-white"
+            className="flex z-50 hover:-translate-y-5 smooth flex-col gap-6 h-auto w-auto p-4 rounded-md shadow-2xl dark:bg-slate-900 bg-white"
           >
             <div className="flex items-center gap-5">
               <Image
@@ -28,7 +28,7 @@ const TestimonialFrame: React.FC<{ testData: TestData[] }> = ({ testData }) => {
                 </div>
               </div>
             </div>
-            <p className=" text-[14px] leading-5 font-normal   text-gray-600 dark:text-gray-300">
+            <p className=" text-[14px] leading-6 font-normal   text-gray-600 dark:text-gray-300">
               {test.review}
             </p>
           </div>
