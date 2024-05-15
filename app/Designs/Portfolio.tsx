@@ -40,26 +40,57 @@ const Portfolio = () => {
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
         <div className=" absolute bottom-0 right-0  ">
-          <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
+          <div className=" bg-indigo-500  min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
-        <Image
+      <div className=" space-y-5 rounded-md p-1 dark:bg-white bg-black">
+      <Image
           src={project1}
           alt=""
-          className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
+          className="ds:w-full xs:w-[230px] smooth rounded-md h-[230px] object-cover"
         />
-        <Image
+        <div className="space-y-3 xs:w-auto ds:w-full p-3">
+          <p className="text-base text-white dark:text-black font-semibold">MovieHub Mobile App</p>
+          <p className="text-sm font-normal text-gray-400 dark:text-gray-600">2017</p>
+        </div>
+      </div>
+      <div className=" space-y-5 rounded-md p-1 dark:bg-white bg-black">
+      <Image
           src={project2}
           alt=""
-          className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
+          className="ds:w-full xs:w-[230px] smooth rounded-md h-[230px] object-cover"
         />
-        <Image
+        <div className="space-y-3 p-3">
+          <p className="text-base text-white dark:text-black font-semibold">Funito</p>
+          <p className="text-sm font-normal text-gray-400 dark:text-gray-600">2017</p>
+        </div>
+      </div>
+      <div className=" space-y-5 rounded-md p-1 dark:bg-white bg-black">
+      <Image
           src={project3}
           alt=""
-          className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
+          className="ds:w-full xs:w-[230px] smooth rounded-md h-[230px] object-cover"
         />
-        <div className="ds:w-full xs:w-[250px] rounded-md h-[230px] hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={homepage} alt="" />
+        <div className="space-y-3 p-3">
+          <p className="text-base text-white dark:text-black font-semibold">Saturn Project Manager</p>
+          <p className="text-sm font-normal text-gray-400 dark:text-gray-600">2020</p>
         </div>
+      </div>
+      <div className=" space-y-5 rounded-md p-1 dark:bg-white bg-black">
+      <Image
+          src={homepage}
+          alt=""
+          className="ds:w-full xs:w-[230px] smooth rounded-md h-[230px] object-cover"
+        />
+        <div className="space-y-3 p-3">
+          <p className="text-base text-white dark:text-black font-semibold">Trivelio.io</p>
+          <p className="text-sm font-normal text-gray-400 dark:text-gray-600">2022</p>
+        </div>
+      </div>
+      
+      
+        
+       
+     
         <div className="ds:w-full hidden  xs:w-[250px] rounded-md h-[230px] hover:scale-105 smooth object-cover overflow-hidden">
           <Image src={jobfinder} alt="" />
         </div>
