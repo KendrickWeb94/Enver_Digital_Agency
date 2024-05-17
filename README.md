@@ -2,7 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+ install the packages:
+
+npm install 
+
+Then Run the server
 
 ```bash
 npm run dev
@@ -15,6 +19,11 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Or if you want to clone this repository 
+- download git bash for windows or mac
+- open your git bash terminal 
+- Run git clone 
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
