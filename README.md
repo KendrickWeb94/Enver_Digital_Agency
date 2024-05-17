@@ -1,29 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and Shadcn 
 
 ## Getting Started
 
  install the packages:
-
-npm install 
+-npm install 
 
 Then Run the server
+- npm run dev
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Or if you want to clone this repository 
 - download git bash for windows or mac
 - open your git bash terminal 
-- Run git clone 
+- Run git clone https://github.com/KendrickWeb94/Enver_Digital_Agency.git
+
+ To see the Live Hosted Site 
+ - https://enver-digital-agency.vercel.app
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
