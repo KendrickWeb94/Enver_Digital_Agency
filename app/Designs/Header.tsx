@@ -10,7 +10,8 @@ import ResponsiveNavbar from "./ResponsiveNavbar";
 
 const Header = () => {
   return (
-    <div className=" w-full z-40 relative mx-auto py-3 max-w-[95%]">
+   <div className=" top-0 fixed bg-white z-50  dark:bg-black w-full">
+     <div className=" w-full z-40 relative mx-auto py-3 max-w-[95%]">
       <div className=" flex items-center justify-between w-full">
         <div className="">
           <Link href="/" className="hidden dark:block ">
@@ -33,6 +34,7 @@ const Header = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

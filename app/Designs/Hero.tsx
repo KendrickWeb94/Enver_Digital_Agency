@@ -9,7 +9,7 @@ const plus = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 const Hero = () => {
   return (
-    <div className=" relative pt-6  z-40 flex w-full md:items-center md:flex-row flex-col justify-between gap-16 ">
+    <div className=" relative pt-6 mt-16 z-40 flex w-full md:items-center md:flex-row flex-col justify-between gap-16 ">
       <div className=" absolute top-0 left-0 right-0 ">
         <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
       </div>
