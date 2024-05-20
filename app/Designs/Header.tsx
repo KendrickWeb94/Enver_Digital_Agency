@@ -9,6 +9,7 @@ import NavItems from "./NavItem";
 import navLinks from "../Data/navlink";
 import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +35,10 @@ const Header = () => {
         isScrolled ? "bg-white dark:bg-black" : "bg-transparent"
       }`}
     >
-      <div className="w-full z-40 relative mx-auto py-3 max-w-[95%]">
+     <motion.div  initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ ease: "backInOut", delay: 1, duration: 2 }}>
+     <div className="w-full z-40 relative mx-auto py-3 max-w-[95%]">
         <div className="flex items-center justify-between w-full">
           <div className="">
             <Link href="/" className="hidden dark:block">
@@ -57,6 +61,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+     </motion.div>
     </div>
   );
 };

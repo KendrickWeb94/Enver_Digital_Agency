@@ -2,11 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import info from "../assets/robot.png";
+import Stars from "../assets/stars.svg"
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
 
 const NewsRobot = () => {
   const [Response, SetResponse] = useState(false);
@@ -14,25 +15,23 @@ const NewsRobot = () => {
     SetResponse(true);
   }
   return (
-    <div className=" min-h-screen relative w-full flex-center">
+    <div className=" min-h-screen relative w-full flex-center ">
+    <div className=" inset-0 absolute w-full ">
+    <Image src={Stars} alt="" />
+    </div>
       {Response && <RobotAction />}
-      <div className=" w-full flex items-center flex-row-reverse flex-wrap smooth gap-16">
-        <Image
-          src={info}
-          alt="info robot"
-          className=" max-w-[500px] min-w-[200px] h-[500px] object-cover"
-        />
-        <div className=" space-y-5 md:w-[50%]">
+      <div className="z-40 w-full text-center mx-auto">
+        <div className=" space-y-5">
           <p className="text-base">
             Stay in control with information. Subscribe yo our newsletter and
             feel the ultimate power of staying updated
           </p>
-          <Input type="email" placeholder="Email" />
+          <Input type="email" placeholder="Email" autoFocus  className=" max-w-md mx-auto"/>
           <div className="z-h">
             <Button
               onClick={Toggle}
               variant="outline"
-              className="bg-black dark:bg-white text-white dark:text-black"
+              className="bg-black dark:bg-white  text-white dark:text-black"
             >
               Subscribe
             </Button>
@@ -71,7 +70,7 @@ const RobotAction = () => {
             <div className="text-right">
               <Button
                 variant="outline"
-                className="bg-white dark:bg-black dark:hover:bg-gray-400/30  text-black dark:text-white hover:bg-gray-400/30 smooth"
+                className="smooth"
               >
                 Undo
               </Button>
