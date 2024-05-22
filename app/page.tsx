@@ -49,7 +49,7 @@ const Page = () => {
           <Benefits />
         </div>
      
-        <div className="  max-w-[95%] pt-10 w-full mx-auto">
+        <div className="bg-black min-h-screen pt-10 w-full mx-auto">
           <Support />
         </div>
     
