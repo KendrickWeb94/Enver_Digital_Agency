@@ -33,7 +33,7 @@ export const Benefits = () => {
             Read the Docs
           </Button>
           <div className="mt-6 flex gap-5 ">
-            <div className="space-y-6">
+            <div className="space-y-5">
               <span className=" ">
                 <Database
                   className=" bg-indigo-200 dark:text-indigo-200 dark:bg-indigo-600 text-indigo-600 text-5xl rounded-lg p-2"
@@ -52,7 +52,7 @@ export const Benefits = () => {
                 <p>API reference</p> <ArrowRightIcon />
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-5">
               <span className=" ">
                 <LucideRocket
                   className=" bg-indigo-200 dark:text-indigo-200 dark:bg-indigo-600 text-indigo-600 text-5xl rounded-lg p-2"
