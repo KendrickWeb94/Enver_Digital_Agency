@@ -26,7 +26,7 @@ const NewsRobot = () => {
             Stay in control with information. Subscribe yo our newsletter and
             feel the ultimate power of staying updated
           </p>
-          <Input type="email" placeholder="Email" autoFocus  className=" max-w-md mx-auto"/>
+          <Input type="email" placeholder="Email"   className=" max-w-md mx-auto"/>
           <div className="z-h">
             <Button
               onClick={Toggle}
