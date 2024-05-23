@@ -7,7 +7,7 @@ import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import circle from "../assets/circle.svg";
 import line from "../assets/line.svg";
-import homepage from "../assets/Home Page.png";
+import homepage from "../assets/green.png";
 import jobfinder from "../assets/jobfinder.png";
 import axos from "../assets/axos.png";
 import web30 from "../assets/web.png";
