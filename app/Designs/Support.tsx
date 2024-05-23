@@ -1,13 +1,4 @@
-
-import React from 'react'
-
-const Support = () => {
-  return (
-    <div>Support</div>
-  )
-}
-
-export default Supportimport { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Book,
   ChevronRight,
