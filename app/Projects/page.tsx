@@ -39,16 +39,13 @@ const Portfolio = () => {
         <div className="absolute left-0 top-0">
           <Image src={line} alt="" />
         </div>
-        <div className="absolute left-0 bottom-0">
-          <Image src={play} alt="" />
-        </div>
         <div className=" absolute bottom left-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
         <div className=" absolute bottom-0 right-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
-        <div className=" w-[280px]  hover:scale-105 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+        <div className=" w-[280px] p-2 hover:scale-105 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
           <Image
             src={project1}
             alt=""
@@ -60,14 +57,14 @@ const Portfolio = () => {
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
              <div className="flex gap-1 text-sm text-yellow-500">
-              <Star  width={22} height={22}/>
-              <Star  width={22} height={22}/>
-              <Star  width={22} height={22}/>
-              <Star  width={22} height={22}/>
-              <Star  width={22} height={22}/>
+              <Star  width={16} height={16}/>
+              <Star  width={22} height={16}/>
+              <Star  width={16} height={16}/>
+              <Star  width={16} height={16}/>
+              <Star  width={16} height={16}/>
              </div>
              <div className="flex flex-wrap">
-              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View project</p><ViewIcon/></Button>
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View project</p><ViewIcon width={16}/></Button>
              </div>
           </div>
         </div>
