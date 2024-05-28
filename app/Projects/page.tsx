@@ -52,7 +52,7 @@ const Portfolio = () => {
         <div className=" absolute bottom-0 right-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
-        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+        <div className=" w-[280px] p-2 py-4 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
           <Image
             src={project1}
             alt=""
@@ -77,7 +77,7 @@ const Portfolio = () => {
               <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
               <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
              <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
-             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             <Button variant={"default"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
              </Link>
              </div>
           </div>
