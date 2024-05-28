@@ -51,7 +51,7 @@ const Portfolio = () => {
         <div className=" absolute bottom-0 right-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
-        <div className=" w-[280px] cursor-pointer p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
           <Image
             src={project1}
             alt=""
@@ -63,7 +63,7 @@ const Portfolio = () => {
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
-              <div className=" -space-x-3">
+              <div className="flex items-center -space-x-3">
                 <Image  alt="" src={user1} className=" w-8 h-8 rounded-full object-cover "/>
                 <Image  alt="" src={user2} className=" w-8 h-8 rounded-full object-cover "/>
                 <Image  alt="" src={user3} className=" w-8 h-8 rounded-full object-cover "/>
@@ -72,7 +72,7 @@ const Portfolio = () => {
               </div>
                 <p>15K+ people like this</p>
              </div>
-             <div className="flex gap-3 flex-wrap cursor-pointer">
+             <div className="flex gap-3 flex-wrap">
               <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View project</p><ViewIcon width={16}/></Button>
               <Button variant={"secondary"} className=" text-sm items-center gap-3"> <p>Like Project</p><ThumbsUp width={16} /></Button>
               <Button variant={"ghost"} className=" text-sm items-center gap-3"> <MessageCircle width={16} /></Button>
