@@ -59,11 +59,11 @@ const Portfolio = () => {
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
              <div className="flex gap-2 text-sm text-yellow-500">
-              <Star  width={26} height={26}/>
-              <Star  width={26} height={26}/>
-              <Star  width={26} height={26}/>
-              <Star  width={26} height={26}/>
-              <Star  width={26} height={26}/>
+              <Star  width={22} height={22}/>
+              <Star  width={2} height={22}/>
+              <Star  width={22} height={22}/>
+              <Star  width={22} height={22}/>
+              <Star  width={22} height={22}/>
              </div>
           </div>
         </div>
