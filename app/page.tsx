@@ -1,6 +1,5 @@
 "use client";
 
-import { ModeToggle } from "@/components/ModeToggle";
 import React from "react";
 import Main from "./Main";
 import Hero from "./Designs/Hero";
@@ -15,9 +14,7 @@ import Support from "./Designs/Support";
 const Page = () => {
   return (
     <>
-      <div className=" fixed z-50  right-0 bottom-0 m-6 p-3">
-        <ModeToggle />
-      </div>
+    
     <div className=" flex flex-col gap-[10rem]">
     <motion.div
         initial={{ opacity: 0, x: 200 }}
