@@ -20,7 +20,7 @@ import travel from "../assets/travel.png";
 import fash from "../assets/fash.png";
 import bit from "../assets/bit.jpg";
 import Image from "next/image";
-import { Star, ViewIcon } from "lucide-react";
+import { Star, ThumbsUp, ViewIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Portfolio = () => {
@@ -63,8 +63,9 @@ const Portfolio = () => {
               <Star  width={16} height={16}/>
               <Star  width={16} height={16}/>
              </div>
-             <div className="flex flex-wrap">
+             <div className="flex gap-3 flex-wrap">
               <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View project</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"> <p>Like Project</p><ThumbsUp width={16} /></Button>
              </div>
           </div>
         </div>
