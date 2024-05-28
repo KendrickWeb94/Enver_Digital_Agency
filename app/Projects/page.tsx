@@ -58,12 +58,12 @@ const Portfolio = () => {
               <h1 className=" text-lg font-semibold ">Squid Game App</h1>
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
-             <div className="flex gap-2 text-lg text-yellow-500">
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
+             <div className="flex gap-2 text-sm text-yellow-500">
+              <Star  width={26} height={26}/>
+              <Star  width={26} height={26}/>
+              <Star  width={26} height={26}/>
+              <Star  width={26} height={26}/>
+              <Star  width={26} height={26}/>
              </div>
           </div>
         </div>
