@@ -63,7 +63,7 @@ const Portfolio = () => {
               <Star  width={16} height={16}/>
               <Star  width={16} height={16}/>
              </div>
-             <div className="flex gap-3 flex-wrap">
+             <div className="flex gap-2">
               <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View project</p><ViewIcon width={16}/></Button>
               <Button variant={"secondary"} className=" text-sm items-center gap-3"> <p>Like Project</p><ThumbsUp width={16} /></Button>
              </div>
