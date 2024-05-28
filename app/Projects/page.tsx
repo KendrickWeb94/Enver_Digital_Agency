@@ -38,9 +38,7 @@ const Portfolio = () => {
         <div className="absolute left-0 top-0">
           <Image src={line} alt="" />
         </div>
-        <div className="absolute left-0 bottom-0">
-          <Image src={play} alt="" />
-        </div>
+       
         <div className=" absolute bottom left-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
