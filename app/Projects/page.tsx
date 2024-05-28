@@ -232,6 +232,186 @@ const Portfolio = () => {
              </div>
           </div>
         </div>
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+          <Image
+            src={game}
+            alt=""
+            className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
+          />
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
+              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+            </div>
+             <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center -space-x-3">
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
+              </div>
+                <p>15K+ people like this</p>
+             </div>
+             <div className="flex gap-3 flex-wrap">
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
+             </div>
+          </div>
+        </div>
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+          <Image
+            src={bit}
+            alt=""
+            className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
+          />
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
+              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+            </div>
+             <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center -space-x-3">
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
+              </div>
+                <p>15K+ people like this</p>
+             </div>
+             <div className="flex gap-3 flex-wrap">
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
+             </div>
+          </div>
+        </div>
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+          <Image
+            src={jobfinder}
+            alt=""
+            className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
+          />
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
+              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+            </div>
+             <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center -space-x-3">
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
+              </div>
+                <p>15K+ people like this</p>
+             </div>
+             <div className="flex gap-3 flex-wrap">
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
+             </div>
+          </div>
+        </div>
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+          <Image
+            src={fash}
+            alt=""
+            className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
+          />
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
+              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+            </div>
+             <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center -space-x-3">
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
+              </div>
+                <p>15K+ people like this</p>
+             </div>
+             <div className="flex gap-3 flex-wrap">
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
+             </div>
+          </div>
+        </div>
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+          <Image
+            src={travel}
+            alt=""
+            className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
+          />
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
+              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+            </div>
+             <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center -space-x-3">
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
+              </div>
+                <p>15K+ people like this</p>
+             </div>
+             <div className="flex gap-3 flex-wrap">
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
+             </div>
+          </div>
+        </div>
+        <div className=" w-[280px] p-2 hover:border-gray-500 dark:hover:border-gray-500/85 smooth max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-2xl ">
+          <Image
+            src={green}
+            alt=""
+            className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
+          />
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
+              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+            </div>
+             <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center -space-x-3">
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
+              </div>
+                <p>15K+ people like this</p>
+             </div>
+             <div className="flex gap-3 flex-wrap">
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
+              <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
+             </div>
+          </div>
+        </div>
 
       </div>
     </div>
