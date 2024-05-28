@@ -46,12 +46,13 @@ const Portfolio = () => {
         <div className=" absolute bottom-0 right-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
-       <div className=" w-[280px] max-h-[450px] rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-md ">
+       <div className=" w-[280px] max-h-[450px] space-y-4 rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-md ">
        <Image
           src={project1}
           alt=""
-          className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
+          className="ds:w-full xs:w-full hover:scale-105 smooth rounded-md h-[230px] object-cover"
         />
+        <div className=""></div>
        </div>
   
       </div>
