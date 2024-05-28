@@ -26,8 +26,9 @@ import travel from "../assets/travel.png";
 import fash from "../assets/fash.png";
 import bit from "../assets/bit.jpg";
 import Image from "next/image";
-import { MessageCircle, Star, ThumbsUp, ViewIcon } from "lucide-react";
+import { GitBranchPlus, MessageCircle, Star, ThumbsUp, ViewIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Portfolio = () => {
   return (
@@ -57,8 +58,8 @@ const Portfolio = () => {
             alt=""
             className="ds:w-full xs:w-full rounded-md h-[230px] object-cover"
           />
-          <div className=" space-y-3">
-            <div className="flex flex-wrap p-2 justify-between items-center">
+          <div className=" space-y-4">
+            <div className="flex flex-wrap  justify-between items-center">
               <h1 className=" text-lg font-semibold ">Squid Game App</h1>
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
@@ -75,7 +76,9 @@ const Portfolio = () => {
              <div className="flex gap-3 flex-wrap">
               <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
               <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
-              <Button variant={"destructive"} className=" text-sm items-center gap-3"> <MessageCircle width={16} /></Button>
+             <Link href="https://github.com/KendrickWeb94/Enver_Digital_Agency">
+             <Button variant={"link"} className=" text-sm items-center gap-3"> <GitBranchPlus width={16} /></Button>
+             </Link>
              </div>
           </div>
         </div>
