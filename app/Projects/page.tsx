@@ -90,7 +90,7 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <h1 className=" text-lg font-semibold ">Funito</h1>
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
@@ -120,7 +120,7 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <h1 className=" text-lg font-semibold ">Digitalio</h1>
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
@@ -150,7 +150,7 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
+              <h1 className=" text-lg font-semibold ">Web 3.0 metaversse</h1>
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
@@ -180,8 +180,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">axos investment capital</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2020</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -210,8 +210,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">Clarity-funding</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2020</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -240,8 +240,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">Gameloop</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2021</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -270,8 +270,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">Gerome-bitcoin-app</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2021</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -300,8 +300,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">JobFinder</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2022</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -330,8 +330,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">kenny-Storez</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2022</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -360,8 +360,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">Travel-Agent</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2023</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
@@ -390,8 +390,8 @@ const Portfolio = () => {
           />
           <div className=" space-y-4">
             <div className="flex flex-wrap  justify-between items-center">
-              <h1 className=" text-lg font-semibold ">Squid Game App</h1>
-              <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
+              <h1 className=" text-lg font-semibold ">greenThumb</h1>
+              <p className="text-sm dark:text-gray-300 text-gray-500">2024</p>
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
