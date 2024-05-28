@@ -2,6 +2,8 @@ import React from "react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 const plus = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
+
+
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
@@ -21,7 +23,7 @@ import Image from "next/image";
 
 const Portfolio = () => {
   return (
-    <div className=" relative min-h-screen pt-[6rem] flex-center flex-col  space-y-9 w-full ">
+    <div className=" relative min-h-screen pt-[6rem] p-2 flex-center flex-col  space-y-9 w-full ">
       <div className={plus.className}>
         <h1 className=" md:text-[45px]  leading-[3rem] sm:text-[32px] ds:text-[27px] text-balance font-bold">
           Our Awesome Portfolio
@@ -44,48 +46,14 @@ const Portfolio = () => {
         <div className=" absolute bottom-0 right-0  ">
           <div className=" bg-indigo-500 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
         </div>
-        <Image
+       <div className=" w-[280px] max-h-[450px] rounded-sm dark:border-[0.5px] border-gray-400/20 dark:shadow-[0px] shadow-md ">
+       <Image
           src={project1}
           alt=""
           className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
         />
-        <Image
-          src={project2}
-          alt=""
-          className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
-        />
-        <Image
-          src={project3}
-          alt=""
-          className="ds:w-full xs:w-[250px] hover:scale-105 smooth rounded-md h-[230px] object-cover"
-        />
-        <div className="ds:w-full xs:w-[250px] rounded-md h-[230px] hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={homepage} alt="" />
-        </div>
-        <div className="ds:w-full   xs:w-[250px] rounded-md h-[230px] hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={jobfinder} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px]  hover:scale-105 smoothobject-cover overflow-hidden">
-          <Image src={axos} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px] hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={web30} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px]  hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={game} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px]  hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={green} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px]  hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={travel} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px]  hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={fash} alt="" />
-        </div>
-        <div className="ds:w-full  xs:w-[250px] rounded-md h-[230px]  hover:scale-105 smooth object-cover overflow-hidden">
-          <Image src={bit} alt="" />
-        </div>
+       </div>
+  
       </div>
     </div>
   );
