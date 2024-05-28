@@ -64,18 +64,18 @@ const Portfolio = () => {
             </div>
              <div className="flex gap-1 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center -space-x-3">
-                <Image  alt="" src={user1} className=" w-6 h-6 rounded-full object-cover "/>
-                <Image  alt="" src={user2} className=" w-6 h-6 rounded-full object-cover "/>
-                <Image  alt="" src={user3} className=" w-6 h-6 rounded-full object-cover "/>
-                <Image  alt="" src={user4} className=" w-6 h-6 rounded-full object-cover "/>
-                <Image  alt="" src={user5} className=" w-6 h-6 rounded-full object-cover "/>
+                <Image  alt="" src={user1} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user2} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user3} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user4} className=" w-7 h-7 rounded-full object-cover "/>
+                <Image  alt="" src={user5} className=" w-7 h-7 rounded-full object-cover "/>
               </div>
                 <p>15K+ people like this</p>
              </div>
              <div className="flex gap-3 flex-wrap">
-              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View project</p><ViewIcon width={16}/></Button>
+              <Button variant={"outline"} className=" text-sm flex items-center gap-3"><p>View</p><ViewIcon width={16}/></Button>
               <Button variant={"secondary"} className=" text-sm items-center gap-3"><ThumbsUp width={16} /></Button>
-              <Button variant={"ghost"} className=" text-sm items-center gap-3"> <MessageCircle width={16} /></Button>
+              <Button variant={"destructive"} className=" text-sm items-center gap-3"> <MessageCircle width={16} /></Button>
              </div>
           </div>
         </div>
