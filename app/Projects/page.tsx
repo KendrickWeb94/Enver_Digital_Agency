@@ -20,6 +20,7 @@ import travel from "../assets/travel.png";
 import fash from "../assets/fash.png";
 import bit from "../assets/bit.jpg";
 import Image from "next/image";
+import { Star } from "lucide-react";
 
 const Portfolio = () => {
   return (
@@ -53,10 +54,17 @@ const Portfolio = () => {
             className="ds:w-full xs:w-full hover:scale-105 smooth rounded-md h-[230px] object-cover"
           />
           <div className=" space-y-3">
-            <div className="flex flex-wrap justify-between items-center">
+            <div className="flex flex-wrap p-2 justify-between items-center">
               <h1 className=" text-lg font-semibold ">Squid Game App</h1>
               <p className="text-sm dark:text-gray-300 text-gray-500">2019</p>
             </div>
+             <div className="">
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+             </div>
           </div>
         </div>
 
