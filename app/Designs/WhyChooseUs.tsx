@@ -24,7 +24,7 @@ import Link from "next/link";
 const WhyChooseUs = () => {
  
   return (
-    <div className=" w-full mx-auto max-w-[95%] min-h-screen flex flex-col space-y-6 pt-16">
+    <div className=" w-full mx-auto max-w-[95%] min-h-auto flex flex-col space-y-6 pt-16">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button className=" w-[180px]" variant="outline">
