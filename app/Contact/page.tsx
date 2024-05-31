@@ -9,9 +9,9 @@ import grid from "../assets/grid.png"
 
 const page = () => {
   return (
-    <div className=" min-h-screen w-full   mx-auto max-w-[95%]">
-      <div className="w-full h-full lg:flex-row flex-col-reverse items-center gap-16 flex  scroll-m-1 ">
-        <div className="lg:w-[60%] bg-indigo-500 w-full lg:h-screen h-[300px]  ">
+    <div className=" min-h-screen w-full ds:pt-24 md:pt-2  mx-auto max-w-[95%]">
+      <div className="w-full h-full lg:flex-row flex-col items-center gap-16 flex  scroll-m-1 ">
+        <div className="lg:w-[60%] bg-indigo-500 overflow-hidden w-full lg:h-screen h-[200px]  ">
          
           <div className="h-full w-full object-cover opacity-50 ">
             <Image src={gradient} alt="" />
