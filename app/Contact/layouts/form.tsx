@@ -18,8 +18,8 @@ import { Input } from "@/components/ui/input"
 import { toast } from "@/components/ui/use-toast"
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  username: z.string().min(1, {
+    message: "email must be valid",
   }),
 })
 
@@ -47,15 +47,15 @@ export function InputForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
         <FormField
           control={form.control}
-          name="username"
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel> Email</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="Enverdigitalagency@email.com" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                enter your email to get redirected 
               </FormDescription>
               <FormMessage />
             </FormItem>
