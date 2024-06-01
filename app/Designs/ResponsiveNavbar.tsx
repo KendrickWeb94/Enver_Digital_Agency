@@ -24,7 +24,7 @@ const ResponsiveNavbar = () => {
           <Link href="../Services">
             <DropdownMenuItem>Services</DropdownMenuItem>
           </Link>
-          <Link href="Services">
+          <Link href="../Contact">
             <DropdownMenuItem>Contact</DropdownMenuItem>
           </Link>
           <Link href="../Projects">
