@@ -4,6 +4,7 @@ import { NavLink } from "../Data/navlink";
 const NavItems: React.FC<{ links: NavLink[] }> = ({ links }) => {
   return (
     <div>
+      
       <ul className=" flex md:items-center gap-7 ds:flex-col md:flex-row">
         {links.map((link) => (
           <li
