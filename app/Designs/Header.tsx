@@ -18,6 +18,7 @@ import {
   UserButton,
   useAuth,
 } from "@clerk/nextjs";
+import { LayoutDashboard } from "lucide-react";
 
 const Header = () => {
   const { userId } = useAuth();
@@ -85,14 +86,21 @@ const Header = () => {
                 </>
               )}
               {userId && (
-                <>
-                  <SignedOut>
-                    <SignInButton />
-                  </SignedOut>
-                  <SignedIn>
-                    <UserButton />
-                  </SignedIn>
-                </>
+                <div className=" flex space-x-5 items-center ">
+                  <Link href="../dashboard">
+                    <div className=" p-2 rounded-full cursor-pointer smooth hover:bg-indigo-600 hover:text-white bg-indigo-200 text-indigo-500 ">
+                      <LayoutDashboard size={17} />
+                    </div>
+                  </Link>
+                  <div>
+                    <SignedOut>
+                      <SignInButton />
+                    </SignedOut>
+                    <SignedIn>
+                      <UserButton />
+                    </SignedIn>
+                  </div>
+                </div>
               )}
               <div className="md:hidden ds:block">
                 <ResponsiveNavbar />

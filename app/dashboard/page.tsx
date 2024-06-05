@@ -2,8 +2,12 @@
 
 import React from 'react'
 
-export const page = () => {
+const page = () => {
   return (
-    <div>welcome to my fackign dashboard</div>
+    <div className=' min-h-screen mx-auto  w-full'>
+        page
+    </div>
   )
 }
+
+export default page
