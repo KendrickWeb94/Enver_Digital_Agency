@@ -21,28 +21,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
-    >
-      <html lang="en" suppressHydrationWarning>
-        <body className={inter.className}>
-          <main className=" w-full overflow-x-hidden">
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="dark"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <div className=" fixed z-50  right-0 bottom-0 m-6 p-3">
-                <ModeToggle />
-              </div>
-              {children}
-            </ThemeProvider>
-          </main>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <main className=" w-full overflow-x-hidden">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className=" fixed z-50  right-0 bottom-0 m-6 p-3">
+              <ModeToggle />
+            </div>
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </main>
+      </body>
+    </html>
   );
 }
