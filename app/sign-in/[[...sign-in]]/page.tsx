@@ -7,7 +7,7 @@ const page = () => {
     <div>
       <div className=" min-h-screen w-full mx-auto max-w-[95%] py-16 flex items-center justify-center">
         <div className=" space-y-16">
-          <div className="z-50">
+          <div className=" z-50">
             <Header />
           </div>
           <SignIn />
