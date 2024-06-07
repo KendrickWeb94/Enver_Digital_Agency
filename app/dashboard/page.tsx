@@ -9,4 +9,4 @@ const page = () => {
   )
 }
 
-export default page className=' w-full h-auto p-1'
+
