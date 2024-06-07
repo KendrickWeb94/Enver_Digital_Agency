@@ -19,7 +19,7 @@ const Support = () => {
         it
       </h1>
       <div className="gap-5 py-5 sm:px-6  md:px-10 grid grid-cols-1 sm:grid-cols-2">
-        <div className=" w-full h-[300px] bg-zinc-950 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
+        <div className=" w-full h-[300px] bg-indigo-600 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
           <span className=" w-12 flex items-center justify-center p-3 bg-indigo-600 rounded-sm text-indigo-200 ">
             <Newspaper />
           </span>
@@ -38,7 +38,7 @@ const Support = () => {
             <p>Read</p> <ChevronRight />{" "}
           </Button>
         </div>
-        <div className=" w-full h-[300px] bg-zinc-950 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
+        <div className=" w-full h-[300px] bg-indigo-600 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
           <span className=" w-12 flex items-center justify-center p-3 bg-indigo-600 rounded-sm text-indigo-200">
             <UsersRound />
           </span>
@@ -57,7 +57,7 @@ const Support = () => {
             <p>Discuss</p> <ChevronRight />{" "}
           </Button>
         </div>
-        <div className=" w-full h-[300px] bg-zinc-950 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
+        <div className=" w-full h-[300px] bg-indigo-600 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
           <span className=" w-12 flex items-center justify-center p-3 bg-indigo-600 rounded-sm text-indigo-200">
             <Book />
           </span>
@@ -76,7 +76,7 @@ const Support = () => {
             <p>Learn</p> <ChevronRight />{" "}
           </Button>
         </div>
-        <div className=" w-full h-[300px] bg-zinc-950 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
+        <div className=" w-full h-[300px] bg-indigo-600 space-y-5 p-5 border-[0.5px] border-gray-400/20 rounded-md">
           <span className=" w-12 flex items-center justify-center p-3 bg-indigo-600 rounded-sm text-indigo-200">
             <HelpingHand />
           </span>

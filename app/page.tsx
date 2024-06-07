@@ -10,11 +10,15 @@ import { DataTableDemo } from "./Designs/NewsLetter";
 import Payment from "./Designs/Payment";
 import { Benefits } from "./Designs/Benefits";
 import Support from "./Designs/Support";
+import Header from "./Designs/Header";
+import Footer from "./Designs/Footer";
 
 const Page = () => {
   return (
-    <>
-    
+    <div className=" space-y16">
+        <div className="z-50">
+        <Header />
+        </div>
     <div className=" flex flex-col gap-[10rem]">
     <motion.div
         initial={{ opacity: 0, x: 200 }}
@@ -55,7 +59,8 @@ const Page = () => {
         </div>
     
     </div>
-    </>
+    <Footer />
+    </div>
   );
 };
 
