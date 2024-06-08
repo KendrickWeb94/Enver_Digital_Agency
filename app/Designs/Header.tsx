@@ -88,7 +88,7 @@ const Header = () => {
               {userId && (
                 <div className=" flex space-x-5 items-center ">
                   <Link href="../dashboard">
-                    <div className=" p-2 rounded-full cursor-pointer smooth hover:bg-indigo-600 hover:text-white bg-indigo-200 text-indigo-500 ">
+                    <div className=" p-2 rounded-full cursor-pointer smooth bg-indigo-600 text-white hover:bg-indigo-400 ">
                       <LayoutDashboard size={17} />
                     </div>
                   </Link>
