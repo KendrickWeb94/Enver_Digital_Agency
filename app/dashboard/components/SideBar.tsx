@@ -4,8 +4,8 @@ import React from 'react';
 
 const SideBar = () => {
   return (
-    <div>
-      SideBar
+    <div className=' relative w-20 h-screen '>
+      
     </div>
   );
 }
