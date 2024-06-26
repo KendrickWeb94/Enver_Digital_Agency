@@ -22,12 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+        <body className={inter.className}>
       <ClerkProvider
         appearance={{
           baseTheme: dark,
         }}
       >
-        <body className={inter.className}>
           <main className=" w-full overflow-x-hidden">
             <ThemeProvider
               attribute="class"
@@ -41,8 +41,8 @@ export default function RootLayout({
               {children}
             </ThemeProvider>
           </main>
-        </body>
       </ClerkProvider>
+        </body>
     </html>
   );
 }
