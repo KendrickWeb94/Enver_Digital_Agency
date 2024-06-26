@@ -9,9 +9,11 @@ const TopBar = () => {
   }
   return (
     <div className="w-full items-center justify-between">
-      TopBar <div>Hello, {user.firstName} welcome to Clerk</div>;
+      TopBar <div>Hello, {user.firstName} welcome to Enver</div>
     </div>
   );
 };
 
 export default TopBar;
+
+
