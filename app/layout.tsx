@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Theme-provider";
-import Header from "./Designs/Header";
-import Footer from "./Designs/Footer";
 import { ModeToggle } from "@/components/ModeToggle";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
