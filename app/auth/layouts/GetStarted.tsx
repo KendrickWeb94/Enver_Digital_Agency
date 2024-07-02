@@ -5,8 +5,14 @@ import { XIcon } from "lucide-react";
 import React, { useState } from "react";
 import axios from "axios";
 import { Input } from "@/components/ui/input";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export const GetStarted = () => {
+interface GetStartedProps {
+  onSuccess: (username: string) => void;
+}
+
+export const GetStarted: React.FC<GetStartedProps> = ({ onSuccess }) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -16,11 +22,14 @@ export const GetStarted = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/register",
-        { username: name, email, password }
-      );
+      const response = await axios.post("http://localhost:5000/register", {
+        username: name,
+        email,
+        password,
+      });
       console.log("User created:", response.data);
+      toast.success("Successfully signed up!");
+      onSuccess(name); // Notify parent component of successful registration
     } catch (error) {
       console.error("Error creating user:", error);
       setError("There was an error creating the user.");
@@ -81,6 +90,7 @@ export const GetStarted = () => {
           </Button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

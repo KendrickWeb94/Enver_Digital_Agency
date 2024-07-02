@@ -11,23 +11,10 @@ import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
-{
-  /* 
-  import {
-    SignInButton,
-    SignedIn,
-    SignedOut,
-    UserButton,
-    useAuth,
-  } from "@clerk/nextjs";
-  import { LayoutDashboard } from "lucide-react";*/
-}
 
-const Header = () => {
-  {
-    /*   const { userId } = useAuth();*/
-  }
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [username, setUsername] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,17 +31,22 @@ const Header = () => {
     };
   }, []);
 
-  const [Getstarted, setGetstarted] = useState(false);
+  const [getStartedVisible, setGetStartedVisible] = useState(false);
 
-  function toggleGetStarted() {
-    setGetstarted(!Getstarted);
-  }
+  const toggleGetStarted = () => {
+    setGetStartedVisible(!getStartedVisible);
+  };
+
+  const handleSuccess = (name: string) => {
+    setUsername(name);
+    setGetStartedVisible(false);
+  };
 
   return (
-    <div className=" relative w-full">
-      {Getstarted && <GetStarted />}
+    <div className="relative w-full">
+      {getStartedVisible && <GetStarted onSuccess={handleSuccess} />}
       <div
-        className={`top-0 fixed z-50 w-full  transition-colors delay-500 ease-in-out duration-500 ${
+        className={`top-0 fixed z-50 w-full transition-colors delay-500 ease-in-out duration-500 ${
           isScrolled ? "bg-white dark:bg-black" : "bg-transparent"
         }`}
       >
@@ -65,7 +57,7 @@ const Header = () => {
         >
           <div className="w-full z-40 relative mx-auto py-3 max-w-[95%]">
             <div className="flex items-center justify-between w-full">
-              <div className="">
+              <div>
                 <Link href="/" className="hidden dark:block">
                   <Image src={logolight} alt="logo" className="w-28" />
                 </Link>
@@ -73,36 +65,21 @@ const Header = () => {
                   <Image src={logodark} alt="logo" className="w-28" />
                 </Link>
               </div>
-              <div className="md:flex ds:hidden flex items-center gap-7">
+              <div className="md:flex ds:hidden items-center gap-7">
                 <NavItems links={navLinks} />
               </div>
 
-              <>
-                <div className="" onClick={toggleGetStarted}>
+              {username ? (
+                <div className="text-black dark:text-white">Welcome, {username}!</div>
+              ) : (
+                <div onClick={toggleGetStarted}>
                   <Button className="bg-transparent border dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
                     Get Started
                   </Button>
                 </div>
-              </>
+              )}
 
-              {/*   {userId && (
-                <div className=" flex space-x-5 items-center ">
-                  <Link href="../dashboard">
-                    <div className=" p-2 rounded-full cursor-pointer smooth bg-indigo-600 text-white hover:bg-indigo-400 ">
-                      <LayoutDashboard size={17} />
-                    </div>
-                  </Link>
-                  <div>
-                    <SignedOut>
-                      <SignInButton />
-                    </SignedOut>
-                    <SignedIn>
-                      <UserButton />
-                    </SignedIn>
-                  </div>
-                </div>
-              )}*/}
-              <div className="md:hidden ds:block">
+              <div className="md:hidden block">
                 <ResponsiveNavbar />
               </div>
             </div>
