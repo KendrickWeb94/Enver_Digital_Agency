@@ -3,9 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Theme-provider";
 import { ModeToggle } from "@/components/ModeToggle";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
-
+{
+  /* 
+  import { ClerkProvider } from "@clerk/nextjs";
+  import { dark } from "@clerk/themes";
+  */
+}
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,25 +24,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ClerkProvider
+        {/* <ClerkProvider
           appearance={{
             baseTheme: dark,
           }}
-        >
-          <main className=" w-full overflow-x-hidden">
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <div className=" fixed z-50  right-0 bottom-0 m-6 p-3">
-                <ModeToggle />
-              </div>
-              {children}
-            </ThemeProvider>
-          </main>
-        </ClerkProvider>
+        >*/}
+        <>
+        <main className=" w-full overflow-x-hidden">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className=" fixed z-50  right-0 bottom-0 m-6 p-3">
+              <ModeToggle />
+            </div>
+            {children}
+          </ThemeProvider>
+        </main>
+        </>
+        {/*   </ClerkProvider>*/}
       </body>
     </html>
   );

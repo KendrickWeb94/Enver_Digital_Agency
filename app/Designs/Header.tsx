@@ -11,17 +11,22 @@ import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
-import {
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-  useAuth,
-} from "@clerk/nextjs";
-import { LayoutDashboard } from "lucide-react";
+{
+  /* 
+  import {
+    SignInButton,
+    SignedIn,
+    SignedOut,
+    UserButton,
+    useAuth,
+  } from "@clerk/nextjs";
+  import { LayoutDashboard } from "lucide-react";*/
+}
 
 const Header = () => {
-  const { userId } = useAuth();
+  {
+    /*   const { userId } = useAuth();*/
+  }
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -38,21 +43,18 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  {
-    /* 
-    const [Getstarted, setGetstarted] = useState(false);
-    
+
+  const [Getstarted, setGetstarted] = useState(false);
+
   function toggleGetStarted() {
     setGetstarted(!Getstarted);
-  }
-  {Getstarted && <GetStarted />}
-*/
   }
 
   return (
     <div className=" relative w-full">
+      {Getstarted && <GetStarted />}
       <div
-        className={`top-0 fixed z-40 w-full  transition-colors delay-500 ease-in-out duration-500 ${
+        className={`top-0 fixed z-50 w-full  transition-colors delay-500 ease-in-out duration-500 ${
           isScrolled ? "bg-white dark:bg-black" : "bg-transparent"
         }`}
       >
@@ -74,18 +76,16 @@ const Header = () => {
               <div className="md:flex ds:hidden flex items-center gap-7">
                 <NavItems links={navLinks} />
               </div>
-              {!userId && (
-                <>
-                  <SignInButton>
-                    <div className="">
-                      <Button className="bg-transparent border dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
-                        Get Started
-                      </Button>
-                    </div>
-                  </SignInButton>
-                </>
-              )}
-              {userId && (
+
+              <>
+                <div className="" onClick={toggleGetStarted}>
+                  <Button className="bg-transparent border dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
+                    Get Started
+                  </Button>
+                </div>
+              </>
+
+              {/*   {userId && (
                 <div className=" flex space-x-5 items-center ">
                   <Link href="../dashboard">
                     <div className=" p-2 rounded-full cursor-pointer smooth bg-indigo-600 text-white hover:bg-indigo-400 ">
@@ -101,7 +101,7 @@ const Header = () => {
                     </SignedIn>
                   </div>
                 </div>
-              )}
+              )}*/}
               <div className="md:hidden ds:block">
                 <ResponsiveNavbar />
               </div>
