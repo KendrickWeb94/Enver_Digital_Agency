@@ -35,7 +35,7 @@ export default function RootLayout({
                   <ModeToggle />
                 </div>
                 {/*<TopBar />*/}
-                <div className=" flex w-full gap-1 p-2 dark:bg-black bg-white relative min-h-screen">
+                <div className=" flex w-full   dark:bg-black bg-white relative min-h-screen">
                   <div className=" absolute top-0 left-0 right-0 ">
                     <div className=" bg-indigo-500/85 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
                   </div>
