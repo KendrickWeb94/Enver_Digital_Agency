@@ -23,7 +23,7 @@ const SideBar = () => {
               <div className=''><ChevronDown /></div>
           </div>
           <hr className=' my-3 '></hr>
-          <div className=' flex p-3 text-sm py-6 flex-col space-y-4'>
+          <div className=' flex p-3 text-sm py-6 flex-col space-y-5'>
             <li className=' hover:text-indigo-600 smooth cursor-pointer flex items-center gap-4'>
               <Home size="20px" /><p>Home</p>
             </li>

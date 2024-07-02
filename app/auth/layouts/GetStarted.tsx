@@ -1,53 +1,85 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Github, KeyIcon, Mail, SidebarCloseIcon, XIcon } from "lucide-react";
-import React from "react";
-import { useState } from "react";
+import { XIcon } from "lucide-react";
+import React, { useState } from "react";
+import axios from "axios";
+import { Input } from "@/components/ui/input";
 
 export const GetStarted = () => {
-  const [CloseOverlay, SetCloseOverlay] = useState(false);
-  function toggleOff() {
-    SetCloseOverlay(!CloseOverlay);
-  }
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/register",
+        { username: name, email, password }
+      );
+      console.log("User created:", response.data);
+    } catch (error) {
+      console.error("Error creating user:", error);
+      setError("There was an error creating the user.");
+    }
+  };
+
+  const [closeOverlay, setCloseOverlay] = useState(false);
+  const toggleOff = () => {
+    setCloseOverlay(!closeOverlay);
+  };
+
   return (
     <div
-      className={`w-full smooth h-screen fixed top-0 bg-slate-200/25  z-50 flex items-center justify-center ${
-        CloseOverlay && `hidden`
+      className={`w-full smooth h-screen fixed top-0 bg-slate-200/25 z-50 flex items-center justify-center ${
+        closeOverlay && `hidden`
       }`}
     >
-      <div className=" max-w-md h-auto relative space-y-5  shadow-xl dark:shadow-none rounded-md dark:bg-black dark:border dark:border-gray-600  bg-white p-8">
-        <div className=" p-3 absolute top-0 right-0  mb-5" onClick={toggleOff}>
-          <button className=" flex items-center p-2 smooth hover:bg-gray-400/60 rounded-full justify-center bg-gray-400/50">
+      <div className="max-w-md h-auto relative space-y-5 shadow-xl dark:shadow-none rounded-md dark:bg-black dark:border dark:border-gray-600 bg-white p-8">
+        <div className="p-3 absolute top-0 right-0 mb-5" onClick={toggleOff}>
+          <button className="flex items-center p-2 smooth hover:bg-gray-400/60 rounded-full justify-center bg-gray-400/50">
             <XIcon size={16} fill="gray" />
           </button>
         </div>
-        <Button
-          variant={"outline"}
-          className=" w-full border p-3 rounded  bg-transparent flex items-center gap-6"
-        >
-          <div className="flex items-center gap-4">
-            <KeyIcon size={15} />{" "}
-            <span>
-              <Mail size={15} />
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <p> Email and Password</p>
-          </div>
-        </Button>
-        <div className="">
-          <Button variant={"outline"}> Continue with Google Account</Button>
-        </div>
-        <div className="">
-          <Button
-            variant={"outline"}
-            className=" flex items-center justify-between gap-9"
-          >
-            {" "}
-            <Github size={23} /> Continue with Github{" "}
+        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <Input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            name="name"
+            id="name"
+            autoComplete="on"
+            placeholder="UserName"
+            className="w-full border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
+          />
+          <Input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            name="email"
+            id="email"
+            autoComplete="on"
+            placeholder="Email"
+            className="w-full border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
+          />
+          <Input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            name="password"
+            id="password"
+            autoComplete="on"
+            placeholder="Password"
+            className="w-full border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
+          />
+          <Button variant={"default"} type="submit" className="w-full">
+            Lift Off
           </Button>
-        </div>
+        </form>
       </div>
     </div>
   );
