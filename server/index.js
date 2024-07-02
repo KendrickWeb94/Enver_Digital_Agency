@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -17,12 +16,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.log(err));
 
-// User Schema and Model
-const userSchema = new mongoose.Schema({
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
-});
-const User = mongoose.model('User', userSchema);
+// Import models
+const User = require('./models/User');
+const Dashboard = require('./models/dashboard');
 
 // Authentication Routes
 app.post('/register', async (req, res) => {
@@ -50,11 +46,22 @@ app.post('/login', async (req, res) => {
   }
 });
 
-// Data Retrieval Route
-app.get('/data', async (req, res) => {
+// Dashboard Routes
+app.post('/dashboard', async (req, res) => {
+  const { title, description } = req.body;
   try {
-    const data = await YourDataModel.find(); // Replace 'YourDataModel' with your actual data model
-    res.status(200).json(data);
+    const newDashboard = new Dashboard({ title, description });
+    await newDashboard.save();
+    res.status(201).send('Dashboard entry created');
+  } catch (err) {
+    res.status(400).send(err.message);
+  }
+});
+
+app.get('/dashboard', async (req, res) => {
+  try {
+    const dashboards = await Dashboard.find();
+    res.status(200).json(dashboards);
   } catch (err) {
     res.status(500).send(err.message);
   }
