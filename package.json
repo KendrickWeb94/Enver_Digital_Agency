@@ -34,6 +34,7 @@
     "hook-form-react": "^2.3.1",
     "lucide-react": "^0.378.0",
     "mongoose": "^8.3.3",
+    "multer": "^1.4.5-lts.1",
     "next": "^14.2.4",
     "next-themes": "^0.3.0",
     "nodemon": "^3.1.0",

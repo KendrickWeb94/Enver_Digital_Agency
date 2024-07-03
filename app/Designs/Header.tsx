@@ -11,11 +11,12 @@ import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
-import { Login } from "../auth/layouts/Login";
+import { Login } from "../auth/layouts/login/Login";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [user, setUser] = useState<{ username: string } | null>(null);
+  const [user, setUser] = useState<{ username: string; avatar?: string } | null>(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +52,25 @@ const Header = () => {
     }
   }, []);
 
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    window.location.reload(); // reload the page to update the header
+  };
+
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String = reader.result as string;
+        setUser((prev) => prev ? { ...prev, avatar: base64String } : null);
+        localStorage.setItem("user", JSON.stringify({ ...user, avatar: base64String }));
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  };
+
   return (
     <div className="relative w-full">
       {Getstarted && <GetStarted />}
@@ -80,8 +100,56 @@ const Header = () => {
               </div>
 
               {user ? (
-                <div className="flex items-center space-x-3">
-                  <span className="text-black dark:text-white">{user.username}</span>
+                <div className="relative">
+                  <button
+                    className="flex items-center space-x-3"
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                  >
+                    <div className="relative w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
+                      {user.avatar ? (
+                        <Image
+                          src={user.avatar}
+                          alt="User Avatar"
+                          layout="fill"
+                          objectFit="cover"
+                          className="rounded-full"
+                        />
+                      ) : (
+                        <span className="w-full h-full flex items-center justify-center text-gray-500">
+                          {user.username.charAt(0)}
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-black hidden dark:text-white">{user.username}</span>
+                  </button>
+                  {dropdownOpen && (
+                    <div className="absolute border border-gray-400/45 overflow-hidden py-3 right-0 mt-2 w-48 bg-white dark:bg-black shadow-md rounded-md">
+                      <label
+                        htmlFor="avatar-upload"
+                        className="block px-4 py-2 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth cursor-pointer"
+                      >
+                        Upload Avatar
+                      </label>
+                      <input
+                        id="avatar-upload"
+                        type="file"
+                        accept="image/*"
+                        onChange={handleAvatarUpload}
+                        className="hidden"
+                      />
+                      <Link href="./auth/layouts/profile">
+                        <p className="block px-4 py-2 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
+                          Profile
+                        </p>
+                      </Link>
+                      <button
+                        onClick={handleSignOut}
+                        className="w-full text-left px-4 py-2 text-black dark:text-white hover:bg-gray-200 smooth dark:hover:bg-indigo-600"
+                      >
+                        Sign Out
+                      </button>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <>
@@ -91,7 +159,7 @@ const Header = () => {
                     </Button>
                   </div>
                   <div className="hidden" onClick={toggleLogin}>
-                    <Button className="bg-transparent border hidden dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
+                    <Button className="bg-transparent border dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
                       Log In
                     </Button>
                   </div>

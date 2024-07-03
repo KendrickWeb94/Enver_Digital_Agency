@@ -7,6 +7,9 @@ import axios from "axios";
 import { Input } from "@/components/ui/input";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { GoRocket } from "react-icons/go";
+import Link from "next/link";
+
 
 export const GetStarted = () => {
   const [name, setName] = useState<string>("");
@@ -88,9 +91,10 @@ export const GetStarted = () => {
             className="w-full border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
           />
           <Button variant={"default"} type="submit" className="w-full">
-            Lift Off
+            Lift Off  <GoRocket  className=" ml-3"/>
           </Button>
         </form>
+        <div className="text-sm dark:text-gray-400 text-gray-600">Already have an Account?  <Link href="./auth/layouts/login" className="text-indigo-600">Login Here</Link> </div>
       </div>
     </div>
   );

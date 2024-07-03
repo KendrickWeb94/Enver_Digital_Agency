@@ -36,7 +36,7 @@ export const Login = () => {
 
   return (
     <div
-      className={`w-full smooth h-screen fixed top-0 bg-slate-200/25 z-50 flex items-center justify-center ${
+      className={`w-full smooth h-screen fixed top-0 bg-zinc-950/50 z-50 flex items-center justify-center ${
         closeOverlay && `hidden`
       }`}
     ><div className=" z-lg ">
@@ -58,7 +58,7 @@ export const Login = () => {
             id="email"
             autoComplete="on"
             placeholder="Email"
-            className="w-full border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
+            className="w-[300px] border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
           />
           <Input
             value={password}
