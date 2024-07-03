@@ -105,7 +105,7 @@ const Header = () => {
                     className="flex items-center space-x-3"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                   >
-                    <div className="relative w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
+                    <div className="relative w-8 h-8 rounded-full bg-indigo-600  overflow-hidden">
                       {user.avatar ? (
                         <Image
                           src={user.avatar}
@@ -115,7 +115,7 @@ const Header = () => {
                           className="rounded-full"
                         />
                       ) : (
-                        <span className="w-full h-full flex items-center justify-center text-gray-500">
+                        <span className="w-full h-full flex items-center justify-center text-white">
                           {user.username.charAt(0)}
                         </span>
                       )}
