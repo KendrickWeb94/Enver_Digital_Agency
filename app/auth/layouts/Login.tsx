@@ -5,11 +5,10 @@ import { XIcon } from "lucide-react";
 import React, { useState } from "react";
 import axios from "axios";
 import { Input } from "@/components/ui/input";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
-export const GetStarted = () => {
-  const [name, setName] = useState<string>("");
+export const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
@@ -19,22 +18,14 @@ export const GetStarted = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/register",
-        { username: name, email, password }
+        "http://localhost:5000/login",
+        { email, password }
       );
-      console.log("User created:", response.data);
-      toast.success("Successfully signed up");
-
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem("user", JSON.stringify(response.data.user));
-      
-      setTimeout(() => {
-        setCloseOverlay(true);
-        window.location.reload(); // reload the page to update the header
-      }, 2000); // close after 2 seconds
+      console.log("User logged in:", response.data);
+      toast.success("Successfully logged in");
     } catch (error) {
-      console.error("Error creating user:", error);
-      setError("There was an error creating the user.");
+      console.error("Error logging in:", error);
+      setError("There was an error logging in.");
     }
   };
 
@@ -48,7 +39,9 @@ export const GetStarted = () => {
       className={`w-full smooth h-screen fixed top-0 bg-slate-200/25 z-50 flex items-center justify-center ${
         closeOverlay && `hidden`
       }`}
-    >
+    ><div className=" z-lg ">
+    <ToastContainer />
+  </div>
       <div className="max-w-md h-auto relative space-y-5 shadow-xl dark:shadow-none rounded-md dark:bg-black dark:border dark:border-gray-600 bg-white p-8">
         <div className="p-3 absolute top-0 right-0 mb-5" onClick={toggleOff}>
           <button className="flex items-center p-2 smooth hover:bg-gray-400/60 rounded-full justify-center bg-gray-400/50">
@@ -57,16 +50,6 @@ export const GetStarted = () => {
         </div>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>
-          <Input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            name="name"
-            id="name"
-            autoComplete="on"
-            placeholder="UserName"
-            className="w-[300px] mt-3 border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
-          />
           <Input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +71,7 @@ export const GetStarted = () => {
             className="w-full border p-3 rounded mb-3 bg-transparent flex items-center gap-6"
           />
           <Button variant={"default"} type="submit" className="w-full">
-            Lift Off
+            Log In
           </Button>
         </form>
       </div>

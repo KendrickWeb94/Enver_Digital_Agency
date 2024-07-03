@@ -11,10 +11,11 @@ import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
+import { Login } from "../auth/layouts/Login";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [username, setUsername] = useState<string | null>(null);
+  const [user, setUser] = useState<{ username: string } | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,22 +32,31 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const [getStartedVisible, setGetStartedVisible] = useState(false);
+  const [Getstarted, setGetstarted] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
-  const toggleGetStarted = () => {
-    setGetStartedVisible(!getStartedVisible);
-  };
+  function toggleGetStarted() {
+    setGetstarted(!Getstarted);
+  }
 
-  const handleSuccess = (name: string) => {
-    setUsername(name);
-    setGetStartedVisible(false);
-  };
+  function toggleLogin() {
+    setShowLogin(!showLogin);
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const user = JSON.parse(localStorage.getItem("user") || '{}');
+      setUser(user);
+    }
+  }, []);
 
   return (
     <div className="relative w-full">
-      {getStartedVisible && <GetStarted onSuccess={handleSuccess} />}
+      {Getstarted && <GetStarted />}
+      {showLogin && <Login />}
       <div
-        className={`top-0 fixed z-50 w-full transition-colors delay-500 ease-in-out duration-500 ${
+        className={`top-0 fixed z-50 w-full  transition-colors delay-500 ease-in-out duration-500 ${
           isScrolled ? "bg-white dark:bg-black" : "bg-transparent"
         }`}
       >
@@ -57,7 +67,7 @@ const Header: React.FC = () => {
         >
           <div className="w-full z-40 relative mx-auto py-3 max-w-[95%]">
             <div className="flex items-center justify-between w-full">
-              <div>
+              <div className="">
                 <Link href="/" className="hidden dark:block">
                   <Image src={logolight} alt="logo" className="w-28" />
                 </Link>
@@ -65,21 +75,30 @@ const Header: React.FC = () => {
                   <Image src={logodark} alt="logo" className="w-28" />
                 </Link>
               </div>
-              <div className="md:flex ds:hidden items-center gap-7">
+              <div className="md:flex ds:hidden flex items-center gap-7">
                 <NavItems links={navLinks} />
               </div>
 
-              {username ? (
-                <div className="text-black dark:text-white">Welcome, {username}!</div>
-              ) : (
-                <div onClick={toggleGetStarted}>
-                  <Button className="bg-transparent border dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
-                    Get Started
-                  </Button>
+              {user ? (
+                <div className="flex items-center space-x-3">
+                  <span className="text-black dark:text-white">{user.username}</span>
                 </div>
+              ) : (
+                <>
+                  <div className="" onClick={toggleGetStarted}>
+                    <Button className="bg-transparent border dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
+                      Get Started
+                    </Button>
+                  </div>
+                  <div className="hidden" onClick={toggleLogin}>
+                    <Button className="bg-transparent border hidden dark:border-white border-black/75 dark:text-white text-black hover:text-white dark:hover:text-black">
+                      Log In
+                    </Button>
+                  </div>
+                </>
               )}
 
-              <div className="md:hidden block">
+              <div className="md:hidden ds:block">
                 <ResponsiveNavbar />
               </div>
             </div>

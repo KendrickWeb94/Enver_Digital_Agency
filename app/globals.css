@@ -25,6 +25,10 @@ img {
   height: auto;
 }
 
+.z-lg{
+  z-index: 99999999;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
