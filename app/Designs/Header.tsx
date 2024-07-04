@@ -120,7 +120,7 @@ const Header = () => {
                         </span>
                       )}
                     </div>
-                    <span className="text-black hidden dark:text-white">{user.username}</span>
+                    <span className="text-black  dark:text-white">{user.username}</span>
                   </button>
                   {dropdownOpen && (
                     <div className="absolute border border-gray-400/45 overflow-hidden py-3 right-0 mt-2 w-48 bg-white dark:bg-black shadow-md rounded-md">
