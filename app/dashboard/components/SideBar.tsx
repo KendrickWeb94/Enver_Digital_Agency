@@ -62,7 +62,7 @@ const SideBar = () => {
             <p>Projects</p>
           </Link>
           <Link
-            href="dashboard/overview"
+            href="/dashboard"
             className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
           >
             <Eye size="20px" />
@@ -76,10 +76,10 @@ const SideBar = () => {
             <p>Settings</p>
           </Link>
         </div>
-        <div className="px-3 py-5">
-          <p className="text-sm flex items-center gap-3 text-yellow-500">
+        <div className="px-3 pb-5">
+          <Link href="dashboard/support" className="text-sm flex items-center gap-3 text-yellow-500">
             <GemIcon size={18} /> Premium Features
-          </p>
+          </Link>
         </div>
         <div className="px-3 space-y-4">
           <p className="text-xs">Customisation</p>
@@ -102,8 +102,8 @@ const SideBar = () => {
                   <Image
                     alt="profile img"
                     src={user.avatar}
-                    width={18}
-                    height={18}
+                    width={19}
+                    height={19}
                     className="w-9 h-9 rounded-md overflow-hidden object-cover"
                   />
                 ) : (
