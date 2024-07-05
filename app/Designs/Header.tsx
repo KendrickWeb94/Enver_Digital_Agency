@@ -12,6 +12,8 @@ import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
 import { Login } from "../auth/layouts/login/Login";
+import { UploadCloudIcon, UserCheck } from "lucide-react";
+import { GoSignOut } from "react-icons/go";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -126,9 +128,9 @@ const Header = () => {
                     <div className="absolute border border-gray-400/45 overflow-hidden py-3 right-0 mt-2 w-48 bg-white dark:bg-black shadow-md rounded-md">
                       <label
                         htmlFor="avatar-upload"
-                        className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth cursor-pointer"
+                        className=" px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth cursor-pointer"
                       >
-                        Upload Avatar
+                       <UploadCloudIcon /> Upload Avatar
                       </label>
                       <input
                         id="avatar-upload"
@@ -138,15 +140,15 @@ const Header = () => {
                         className="hidden"
                       />
                       <Link href="./auth/layouts/profile">
-                        <p className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
-                          Profile
+                        <p className="px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
+                       <UserCheck />   Profile
                         </p>
                       </Link>
                       <button
                         onClick={handleSignOut}
-                        className="w-full text-left text-sm px-4 py-2 text-black dark:text-white hover:bg-gray-200 smooth dark:hover:bg-indigo-600"
+                        className="w-full flex items-center gap-3 text-left text-sm px-4 py-2 text-black dark:text-white hover:bg-gray-200 smooth dark:hover:bg-indigo-600"
                       >
-                        Sign Out
+                   <GoSignOut />     Sign Out
                       </button>
                     </div>
                   )}

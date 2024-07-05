@@ -37,6 +37,7 @@ const SideBar = () => {
               <Settings size="20px" /><p>Settings</p>
             </li>
           </div>
+          <div className=''></div>
       </div>
     </div>
   );
