@@ -19,7 +19,7 @@ const Hero = () => {
       <div className=" md:w-[50%]">
         <div className={plus.className}>
           <div className=" flex flex-col space-y-5">
-            <h1 className="lg:text-6xl md:text-5xl  sm:text-5xl ds:text-4xl text-balance font-extrabold">
+            <h1 className="lg:text-6xl md:text-5xl text-transparent bg-clip-text to-yellow-300  text-clip bg-gradient-to-r from-indigo-600 sm:text-5xl ds:text-4xl text-balance font-extrabold">
               Build Your Awesome Platform
             </h1>
             <span>
@@ -29,7 +29,7 @@ const Hero = () => {
                 service for those of you who use our services.
               </p>
             </span>
-            <button className=" w-[200px] opacity-75 hover:opacity-100 smooth rounded-sm p-3 justify-center gap-2 bg-indigo-500 text-white text-sm font-medium flex items-center ">
+            <button className=" w-[200px] opacity-75  to-yellow-300   bg-gradient-to-r from-indigo-600 hover:opacity-100 smooth rounded-sm p-3 justify-center gap-2  text-white text-sm font-medium flex items-center ">
               Our Services <GoArrowUpRight className=" text-lg" />
             </button>
           </div>

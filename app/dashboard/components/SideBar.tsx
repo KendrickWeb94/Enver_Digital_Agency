@@ -35,10 +35,10 @@ const SideBar = () => {
         <div className="w-full flex items-center p-3 justify-between">
           <div>
             <Link href="/" className="hidden dark:block">
-              <Image src={logolight} alt="logo" className="w-24" />
+              <Image src={logolight} alt="logo" className="w-19" />
             </Link>
             <Link href="/" className="dark:hidden">
-              <Image src={logodark} alt="logo" className="w-24" />
+              <Image src={logodark} alt="logo" className="w-19" />
             </Link>
           </div>
           <div>
@@ -89,13 +89,13 @@ const SideBar = () => {
           <p className="text-xs">Presentation</p>
         </div>
 
-        <div className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600">
+        <Link href="/support" className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600">
           <CircleHelp size={18} />
           Support
-        </div>
+        </Link>
 
         {user && (
-          <div className="py-6 px-3">
+          <div className="py-5 px-3">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 bg-indigo-600 rounded-md overflow-hidden">
                 {user.avatar ? (

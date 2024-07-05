@@ -10,7 +10,7 @@ import faq from "../assets/faq.svg";
 export function AccordionDemo() {
   return (
     <div className=" min-h-screen w-full justify-center pt-16 flex-col space-y-7 items-center">
-      <h1 className=" text-center font-extrabold lg:text-4xl text-3xl text-balance">
+      <h1 className=" to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip text-center font-extrabold lg:text-4xl text-3xl text-balance">
         FAQs
       </h1>
       <div className=" flex-wrap gap-16  p-5 flex-center ">

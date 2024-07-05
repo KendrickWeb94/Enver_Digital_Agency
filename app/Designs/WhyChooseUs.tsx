@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
         </div>
         <div className="space-y-4">
           <div className={plus.className}>
-            <h1 className=" md:text-[48px] leading-[3rem] sm:text-[36px] ds:text-[30px] text-balance font-extrabold">
+            <h1 className=" md:text-[48px] leading-[3rem]  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip sm:text-[36px] ds:text-[30px] text-balance font-extrabold">
               why enver is the <br></br>best choice?
             </h1>
           </div>

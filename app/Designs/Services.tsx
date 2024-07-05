@@ -18,7 +18,7 @@ const Services = () => {
   return (
     <div className="pt-16 w-full relative text-center smooth min-h-screen container flex-col space-y-8 lg:flex lg:items-center lg:justify-center  p-1">
       <div className={plus.className}>
-        <h1 className=" md:text-[48px] leading-[3rem] sm:text-[36px] ds:text-[30px] text-balance font-extrabold">
+        <h1 className=" md:text-[48px]  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip leading-[3rem] sm:text-[36px] ds:text-[30px] text-balance font-extrabold">
           The Service We Provide <br className=" ds:hidden sm:block"></br> For
           You
         </h1>

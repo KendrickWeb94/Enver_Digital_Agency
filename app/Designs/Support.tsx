@@ -14,7 +14,7 @@ const Support = () => {
       <p className="uppercase text-white font-medium text-center">
         Enver Support
       </p>
-      <h1 className=" ds:text-2xl text-white sm:text-3xl text-balance text-center md:text-4xl font-semibold">
+      <h1 className=" ds:text-2xl  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip text-white sm:text-3xl text-balance text-center md:text-4xl font-semibold">
         All around Help when,<br className=" sm:block ds:hidden"></br> you need
         it
       </h1>

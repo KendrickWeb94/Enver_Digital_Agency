@@ -11,7 +11,7 @@ const Testimonials = () => {
       <div className=" absolute top-0 left-0  ">
         <div className=" dark:bg-yellow-300 bg-yellow-300 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
       </div>
-      <h1 className=" text-center font-extrabold lg:text-4xl text-3xl text-balance">
+      <h1 className=" text-center  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip font-extrabold lg:text-4xl text-3xl text-balance">
         We have worked with thousands of amazing people
       </h1>
       <div className="z-50">

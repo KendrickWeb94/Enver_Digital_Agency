@@ -19,7 +19,7 @@ export const Benefits = () => {
       </div>
       <div className="z-40 lg:w-[50%]">
         <div className="z-40 space-y-6">
-          <h1 className="md:text-[35px] ds:text-[24px] sm:text-[30px] leading- font-bold ">
+          <h1 className="md:text-[35px] ds:text-[24px] to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip sm:text-[30px] leading- font-bold ">
             How our API can be useful to your business
           </h1>
           <p className="font-normal text-gray-600 text-[14px] leading-6 dark:text-gray-300 smooth ">

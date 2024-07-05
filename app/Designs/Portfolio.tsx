@@ -26,7 +26,7 @@ const Portfolio = () => {
   return (
     <div className=" relative min-h-screen pt-[6rem] flex-center flex-col  space-y-9 w-full ">
       <div className={plus.className}>
-        <h1 className=" md:text-[45px]  leading-[3rem] sm:text-[32px] ds:text-[27px] text-balance font-bold">
+        <h1 className=" md:text-[45px]  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip leading-[3rem] sm:text-[32px] ds:text-[27px] text-balance font-bold">
           Our Awesome Portfolio
         </h1>
       </div>

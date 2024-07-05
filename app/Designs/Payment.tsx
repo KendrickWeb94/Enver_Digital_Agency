@@ -18,7 +18,7 @@ const Payment = () => {
           className=" w-[400px] ds:hidden lg:block min-w-[200px] h-full object-cover"
         />
         <div className=" space-y-4">
-          <h2 className=" ds:text-xl sm:text-2xl  font-semibold ">
+          <h2 className=" ds:text-xl sm:text-2xl  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip  font-semibold ">
             Get The Mobile App
           </h2>
           <div className="  md:w-[100%] gap-7 grid grid-cols-1 sm:grid-cols-2">

@@ -12,7 +12,7 @@ import { Benefits } from "./Designs/Benefits";
 import Support from "./Designs/Support";
 import Header from "./Designs/Header";
 import Footer from "./Designs/Footer";
-
+import Contact from "./Designs/Contact"
 const Page = () => {
   return (
     <div className=" space-y16">
@@ -52,6 +52,10 @@ const Page = () => {
      
         <div className="bg-black min-h-screen py-10 w-full mx-auto">
           <Support />
+        </div>
+    
+        <div className="  max-w-[95%] pt-10 w-full mx-auto">
+          <Contact />
         </div>
     
         <div className="  max-w-[95%] pt-10 w-full mx-auto">

@@ -339,7 +339,7 @@ export function DataTableDemo() {
 
   return (
     <div className="w-full z-40 space-y-7">
-      <h1 className=" md:text-[48px] py-5 text-center leading-[3rem] sm:text-[36px] ds:text-[30px] text-balance font-extrabold">
+      <h1 className=" md:text-[48px] py-5  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip text-center leading-[3rem] sm:text-[36px] ds:text-[30px] text-balance font-extrabold">
         Our Latest Transactions
       </h1>
       <div className="flex items-center py-4">

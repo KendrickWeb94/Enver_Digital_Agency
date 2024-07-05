@@ -22,7 +22,7 @@ const NewsRobot = () => {
       {Response && <RobotAction />}
       <div className="z-40 w-full text-center mx-auto">
         <div className=" space-y-5">
-          <p className="text-base">
+          <p className="text-base  to-yellow-300   bg-gradient-to-r from-indigo-600 bg-clip-text text-transparent text-clip">
             Stay in control with information. Subscribe yo our newsletter and
             feel the ultimate power of staying updated
           </p>
