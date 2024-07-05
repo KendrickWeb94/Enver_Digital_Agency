@@ -5,15 +5,15 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import logolight from "../assets/logo.png";
 import logodark from "../assets/logo-dark.png";
-import NavItems from "./NavItem";
+import NavItems from "./NavItem"; 
 import navLinks from "../Data/navlink";
 import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
 import { Login } from "../auth/layouts/login/Login";
-import { UploadCloudIcon, UserCheck } from "lucide-react";
-import { GoSignOut } from "react-icons/go";
+import { ArrowLeft, LayoutDashboardIcon, UploadCloudIcon, UserCheck } from "lucide-react";
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -125,12 +125,12 @@ const Header = () => {
                     <span className="text-black  dark:text-white">{user.username}</span>
                   </button>
                   {dropdownOpen && (
-                    <div className="absolute border border-gray-400/45 overflow-hidden py-3 right-0 mt-2 w-48 bg-white dark:bg-black shadow-md rounded-md">
+                    <div className="absolute border-[0.5px]  border-gray-500/20 overflow-hidden py-3 right-0 mt-2 w-48 bg-white dark:bg-black shadow-md rounded-md">
                       <label
                         htmlFor="avatar-upload"
                         className=" px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth cursor-pointer"
                       >
-                       <UploadCloudIcon /> Upload Avatar
+                       <UploadCloudIcon  size={19}/> Upload Avatar
                       </label>
                       <input
                         id="avatar-upload"
@@ -141,14 +141,19 @@ const Header = () => {
                       />
                       <Link href="./auth/layouts/profile">
                         <p className="px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
-                       <UserCheck />   Profile
+                       <UserCheck  size={19}/>   Profile
+                        </p>
+                      </Link>
+                      <Link href="./dashboard">
+                        <p className="px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
+                       <LayoutDashboardIcon  size={19}/>   Dashboard
                         </p>
                       </Link>
                       <button
                         onClick={handleSignOut}
                         className="w-full flex items-center gap-3 text-left text-sm px-4 py-2 text-black dark:text-white hover:bg-gray-200 smooth dark:hover:bg-indigo-600"
                       >
-                   <GoSignOut />     Sign Out
+                <ArrowLeft  size={19}/>  Sign Out
                       </button>
                     </div>
                   )}
