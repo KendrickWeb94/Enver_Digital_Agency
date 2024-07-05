@@ -102,8 +102,9 @@ const SideBar = () => {
                   <Image
                     alt="profile img"
                     src={user.avatar}
-                    layout="fill"
-                    objectFit="cover"
+                    width={18}
+                    height={18}
+                    className="w-9 h-9 rounded-md overflow-hidden object-cover"
                   />
                 ) : (
                   <div className="w-full h-full bg-indigo-600 flex items-center justify-center">
