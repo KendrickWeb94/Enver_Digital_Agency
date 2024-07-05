@@ -55,7 +55,7 @@ const SideBar = () => {
             <p>Home</p>
           </Link>
           <Link
-            href="dashboard/projects"
+            href="dashboard/yourprojects"
             className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
           >
             <LayoutDashboard size="20px" />
