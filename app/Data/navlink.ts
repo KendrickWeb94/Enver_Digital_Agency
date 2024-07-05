@@ -9,7 +9,7 @@ export interface NavLink {
   
   const navLinks: NavLink[] = [
     { id: 1, text: "Home", url: "/" },
-    { id: 2, text: "Try Our Services", url: "../dashboard" },
+    { id: 2, text: "Blog & Newsletter", url: "../Newsletter" },
     { id: 4, text: "Our Projects", url: "../Projects" }
   ];
   
