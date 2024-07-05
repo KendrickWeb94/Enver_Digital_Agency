@@ -16,7 +16,11 @@ import {
 } from "lucide-react";
 
 const SideBar = () => {
-  const [user, setUser] = useState<{ username: string; avatar?: string; email?: string } | null>(null);
+  const [user, setUser] = useState<{
+    username: string;
+    avatar?: string;
+    email?: string;
+  } | null>(null);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -43,22 +47,34 @@ const SideBar = () => {
         </div>
         <hr className="my-3" />
         <div className="flex p-3 text-sm py-6 flex-col space-y-5">
-          <li className="hover:text-indigo-600 smooth cursor-pointer flex items-center gap-4">
+          <Link
+            href="/"
+            className="hover:text-indigo-600 smooth cursor-pointer flex items-center gap-4"
+          >
             <Home size="20px" />
             <p>Home</p>
-          </li>
-          <li className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4">
+          </Link>
+          <Link
+            href="dashboard/projects"
+            className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
+          >
             <LayoutDashboard size="20px" />
             <p>Projects</p>
-          </li>
-          <li className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4">
+          </Link>
+          <Link
+            href="dashboard/overview"
+            className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
+          >
             <Eye size="20px" />
             <p>Overview</p>
-          </li>
-          <li className="flex hover:text-indigo-600 smooth cursor-pointer items-center gap-4">
+          </Link>
+          <Link
+            href="dashboard/settings"
+            className="flex hover:text-indigo-600 smooth cursor-pointer items-center gap-4"
+          >
             <Settings size="20px" />
             <p>Settings</p>
-          </li>
+          </Link>
         </div>
         <div className="px-3 py-5">
           <p className="text-sm flex items-center gap-3 text-yellow-500">
@@ -83,16 +99,25 @@ const SideBar = () => {
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 bg-indigo-600 rounded-md overflow-hidden">
                 {user.avatar ? (
-                  <Image alt="profile img" src={user.avatar} layout="fill" objectFit="cover"  />
+                  <Image
+                    alt="profile img"
+                    src={user.avatar}
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 ) : (
                   <div className="w-full h-full bg-indigo-600 flex items-center justify-center">
-                    <span className="text-white">{user.username.charAt(0)}</span>
+                    <span className="text-white">
+                      {user.username.charAt(0)}
+                    </span>
                   </div>
                 )}
               </div>
               <div className="space-y-1">
                 <p className="text-sm">{user.username}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-300">{user.email}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-300">
+                  {user.email}
+                </p>
               </div>
             </div>
           </div>
