@@ -89,7 +89,7 @@ const SideBar = () => {
           <p className="text-xs">Presentation</p>
         </div>
 
-        <Link href="/support" className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600">
+        <Link href="dashboard/support" className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600">
           <CircleHelp size={18} />
           Support
         </Link>

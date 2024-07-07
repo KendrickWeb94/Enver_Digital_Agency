@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const User = require('./models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const User = require('./models/User');
+const Contact = require('./models/Contact');
 
 const app = express();
 
@@ -48,6 +49,19 @@ app.post('/login', async (req, res) => {
     res.status(200).json({ message: 'Login successful', token, user });
   } catch (error) {
     res.status(500).json({ message: 'Error logging in', error });
+  }
+});
+
+// Add the contact route
+app.post('/contact', async (req, res) => {
+  const { name, email, message } = req.body;
+
+  try {
+    const newContact = new Contact({ name, email, message });
+    await newContact.save();
+    res.status(201).json({ message: 'Message sent successfully', contact: newContact });
+  } catch (error) {
+    res.status(500).json({ message: 'Error sending message', error });
   }
 });
 
