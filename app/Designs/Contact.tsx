@@ -5,13 +5,13 @@ import Image from "next/image";
 import contactphoto from "../assets/contact.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const Contact = () => {
       });
 
       if (response.status === 201) {
-        alert("Message sent successfully");
+        setShowModal(true);
         setName("");
         setEmail("");
         setMessage("");
@@ -91,6 +91,22 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {showModal && (
+        <div className="fixed z-lg inset-0 flex items-center justify-center z-50">
+          <div className="bg-black bg-opacity-50 absolute inset-0"></div>
+          <div className="bg-white p-6 rounded-md shadow-md relative z-10">
+            <h2 className="text-2xl font-bold mb-4">Message Sent</h2>
+            <p>Your message has been sent successfully!</p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
