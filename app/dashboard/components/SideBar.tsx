@@ -30,7 +30,7 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div className="w-[280px] z-50 h-full">
+    <div className="w-[280px]  z-50 h-full">
       <div className="w-full relative h-full">
         <div className="w-full flex items-center p-3 justify-between">
           <div>
