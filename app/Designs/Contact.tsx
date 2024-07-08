@@ -6,6 +6,7 @@ import contactphoto from "../assets/contact.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -94,16 +95,17 @@ const Contact = () => {
 
       {showModal && (
         <div className="fixed z-lg inset-0 flex items-center justify-center z-50">
-          <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-          <div className="bg-white p-6 rounded-md shadow-md relative z-10">
-            <h2 className="text-2xl font-bold mb-4">Message Sent</h2>
+          <div className="bg-zinc-800/45 bg-opacity-50 absolute inset-0"></div>
+          <div className="bg-black p-6 rounded-md shadow-md relative z-10">
+            <h2 className="text-2xl font-bold plus inter mb-4">Message Sent</h2>
             <p>Your message has been sent successfully!</p>
-            <button
+            <Button
+              variant={"destructive"}
               onClick={() => setShowModal(false)}
-              className="mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
+              className="mt-4  rounded-md"
             >
               Close
-            </button>
+            </Button>
           </div>
         </div>
       )}
