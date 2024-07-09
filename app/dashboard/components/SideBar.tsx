@@ -42,7 +42,9 @@ const SideBar = () => {
             </Link>
           </div>
           <div>
-            <ChevronDown />
+            <div className="w-6 h-6 text-white rounded-md bg-gray-400/45 flex-center">
+              <ChevronDown size={15}/>
+            </div>
           </div>
         </div>
         <hr className="my-3" />
@@ -77,7 +79,10 @@ const SideBar = () => {
           </Link>
         </div>
         <div className="px-3 pb-5">
-          <Link href="dashboard/support" className="text-sm flex items-center gap-3 text-yellow-500">
+          <Link
+            href="dashboard/support"
+            className="text-sm flex items-center gap-3 text-yellow-500"
+          >
             <GemIcon size={18} /> Premium Features
           </Link>
         </div>
@@ -89,7 +94,10 @@ const SideBar = () => {
           <p className="text-xs">Presentation</p>
         </div>
 
-        <Link href="dashboard/support" className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600">
+        <Link
+          href="dashboard/support"
+          className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600"
+        >
           <CircleHelp size={18} />
           Support
         </Link>
