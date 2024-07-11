@@ -42,7 +42,7 @@ const SideBar = () => {
             </Link>
           </div>
           <div>
-            <div className="w-6 h-6 text-white rounded-md bg-gray-400/45 flex-center">
+            <div className="w-6 h-6 text-white rounded-md  bg-gray-400/45 flex-center">
               <ChevronDown size={15}/>
             </div>
           </div>

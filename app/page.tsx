@@ -58,7 +58,7 @@ const Page = () => {
           <Contact />
         </div>
     
-        <div className="  max-w-[95%] pt-10 w-full mx-auto">
+        <div className=" hidden  max-w-[95%] pt-10 w-full mx-auto">
           <NewsRobot />
         </div>
     
