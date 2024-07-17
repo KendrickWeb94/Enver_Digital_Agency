@@ -1,6 +1,5 @@
 import React from "react";
 import Services from "./Designs/Services";
-import Portfolio from "./Designs/Portfolio";
 import Testimonials from "./Designs/Testimonials";
 import { AccordionDemo } from "./Designs/FAQs";
 import { motion } from "framer-motion";
@@ -12,10 +11,6 @@ const Main = () => {
       <div className=" w-full  o relative z-40 pt-4  mx-auto max-w-[95%]">
         <Services />
 
-       
-          <div className=" w-full  o relative z-40 pt-4  mx-auto max-w-[95%]">
-            <Portfolio />
-          </div>
      
           <div className=" w-full  o relative z-40 pt-4  mx-auto max-w-[95%]">
             <Testimonials />

@@ -1,12 +1,30 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 
-import React from 'react'
+"use client";
+
+import { ChartTop } from "./components/ChartTop";
+import * as React from "react";
+import { Calendar } from "@/components/ui/calendar";
+import { useState } from "react";
 
 const page = () => {
-  return (
-    <div className=' w-full p-2 z-40'>
-      <div className='w-full min-h-screen rounded-sm z-40 bg-slate-300 dark:bg-[#18171C]'></div>
-    </div>
-  )
-}
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
 
-export default page
+  return (
+    <div className=" w-full p-2 z-40">
+      <div className="w-full min-h-screen rounded-sm z-40 bg-slate-300 dark:bg-[#18171C]">
+        <div className="flex items-center gap-16">
+          <ChartTop />
+          <Calendar
+            mode="single"
+            selected={date}
+            onSelect={setDate}
+            className="rounded-md border"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default page;
