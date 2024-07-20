@@ -30,15 +30,15 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div className="w-[280px]  z-50 h-full">
-      <div className="w-full relative h-full">
-        <div className="w-full flex items-center p-3 justify-between">
+    <div className="w-[280px] z-50 h-full">
+      <div className="w-full  relative h-full">
+        <div className="w-full flex p-3 justify-between">
           <div>
             <Link href="/" className="hidden dark:block">
-              <Image src={logolight} alt="logo" className="w-19" />
+              <Image src={logolight} alt="logo" className="w-19 hidden md:block" />
             </Link>
             <Link href="/" className="dark:hidden">
-              <Image src={logodark} alt="logo" className="w-19" />
+              <Image src={logodark} alt="logo" className="w-19 hidden md:block" />
             </Link>
           </div>
           <div>
@@ -54,28 +54,28 @@ const SideBar = () => {
             className="hover:text-indigo-600 smooth cursor-pointer flex items-center gap-4"
           >
             <Home size="20px" />
-            <p>Home</p>
+            <p className=" md:block">Home</p>
           </Link>
           <Link
             href="dashboard/yourprojects"
             className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
           >
             <LayoutDashboard size="20px" />
-            <p>Projects</p>
+            <p className=" md:block">Projects</p>
           </Link>
           <Link
             href="/dashboard"
             className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
           >
             <Eye size="20px" />
-            <p>Overview</p>
+            <p className=" md:block">Overview</p>
           </Link>
           <Link
             href="dashboard/settings"
             className="flex hover:text-indigo-600 smooth cursor-pointer items-center gap-4"
           >
             <Settings size="20px" />
-            <p>Settings</p>
+            <p className=" md:block">Settings</p>
           </Link>
         </div>
         <div className="px-3 pb-5">
@@ -83,10 +83,10 @@ const SideBar = () => {
             href="dashboard/support"
             className="text-sm flex items-center gap-3 text-yellow-500"
           >
-            <GemIcon size={18} /> Premium Features
+            <GemIcon size={18} /><p className=" md:block">Premium Features</p>
           </Link>
         </div>
-        <div className="px-3 space-y-4">
+        <div className="px-3 space-y-4 ">
           <p className="text-xs">Customisation</p>
           <p className="text-xs">Draggable Components</p>
           <p className="text-xs">Unlimted Projects</p>
@@ -99,30 +99,30 @@ const SideBar = () => {
           className="py-6 px-3 text-sm flex items-center gap-3 text-blue-600"
         >
           <CircleHelp size={18} />
-          Support
+        <p className="  md:block">Support</p>
         </Link>
 
         {user && (
           <div className="py-5 px-3">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-indigo-600 rounded-md overflow-hidden">
+              <div className="w-9 h-9 bg-indigo-600 rounded-md overflow-">
                 {user.avatar ? (
                   <Image
                     alt="profile img"
                     src={user.avatar}
                     width={19}
                     height={19}
-                    className="w-9 h-9 rounded-md overflow-hidden object-cover"
+                    className="w-9 h-9 rounded-lg overflow-hidden object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-indigo-600 flex items-center justify-center">
+                  <div className="w-full h-full rounded-lg bg-indigo-600 flex items-center justify-center">
                     <span className="text-white">
                       {user.username.charAt(0)}
                     </span>
                   </div>
                 )}
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1  md:block">
                 <p className="text-sm">{user.username}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-300">
                   {user.email}
