@@ -5,19 +5,28 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import logolight from "../assets/logo.png";
 import logodark from "../assets/logo-dark.png";
-import NavItems from "./NavItem"; 
+import NavItems from "./NavItem";
 import navLinks from "../Data/navlink";
 import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 import { motion } from "framer-motion";
 import { GetStarted } from "../auth/layouts/GetStarted";
 import { Login } from "../auth/layouts/login/Login";
-import { ArrowLeft, LayoutDashboardIcon, UploadCloudIcon, UserCheck } from "lucide-react";
-
+import { Profile } from "../auth/Profile";
+import {
+  ArrowLeft,
+  LayoutDashboardIcon,
+  UploadCloudIcon,
+  UserCheck,
+} from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [user, setUser] = useState<{ username: string; avatar?: string } | null>(null);
+  const [ShowProfile, setShowProfile] = useState(false);
+  const [user, setUser] = useState<{
+    username: string;
+    avatar?: string;
+  } | null>(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
@@ -42,6 +51,10 @@ const Header = () => {
     setGetstarted(!Getstarted);
   }
 
+  function toggleProfile() {
+    setShowProfile(!ShowProfile);
+  }
+
   function toggleLogin() {
     setShowLogin(!showLogin);
   }
@@ -49,7 +62,7 @@ const Header = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      const user = JSON.parse(localStorage.getItem("user") || '{}');
+      const user = JSON.parse(localStorage.getItem("user") || "{}");
       setUser(user);
     }
   }, []);
@@ -66,8 +79,11 @@ const Header = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         const base64String = reader.result as string;
-        setUser((prev) => prev ? { ...prev, avatar: base64String } : null);
-        localStorage.setItem("user", JSON.stringify({ ...user, avatar: base64String }));
+        setUser((prev) => (prev ? { ...prev, avatar: base64String } : null));
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ ...user, avatar: base64String })
+        );
       };
       reader.readAsDataURL(e.target.files[0]);
     }
@@ -77,6 +93,7 @@ const Header = () => {
     <div className="relative w-full">
       {Getstarted && <GetStarted />}
       {showLogin && <Login />}
+      {ShowProfile && <Profile />}
       <div
         className={`top-0 fixed z-50 w-full  transition-colors delay-500 ease-in-out duration-500 ${
           isScrolled ? "bg-white dark:bg-black" : "bg-transparent"
@@ -122,7 +139,9 @@ const Header = () => {
                         </span>
                       )}
                     </div>
-                    <span className="text-black  dark:text-white">{user.username}</span>
+                    <span className="text-black  dark:text-white">
+                      {user.username}
+                    </span>
                   </button>
                   {dropdownOpen && (
                     <div className="absolute border-[0.5px]  border-gray-500/20 overflow-hidden py-3 right-0 mt-2 w-48 bg-white dark:bg-black shadow-md rounded-md">
@@ -130,7 +149,7 @@ const Header = () => {
                         htmlFor="avatar-upload"
                         className=" px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth cursor-pointer"
                       >
-                       <UploadCloudIcon  size={19}/> Upload Avatar
+                        <UploadCloudIcon size={19} /> Upload Avatar
                       </label>
                       <input
                         id="avatar-upload"
@@ -139,21 +158,23 @@ const Header = () => {
                         onChange={handleAvatarUpload}
                         className="hidden"
                       />
-                      <Link href="./auth/layouts/profile">
+
+                      <div className="" onClick={toggleProfile}>
                         <p className="px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
-                       <UserCheck  size={19}/>   Profile
+                          <UserCheck size={19} /> Profile
                         </p>
-                      </Link>
+                      </div>
+
                       <Link href="./dashboard">
                         <p className="px-4 py-2 flex items-center gap-3 text-sm text-black dark:text-white hover:bg-gray-200 dark:hover:bg-indigo-600 smooth">
-                       <LayoutDashboardIcon  size={19}/>   Dashboard
+                          <LayoutDashboardIcon size={19} /> Dashboard
                         </p>
                       </Link>
                       <button
                         onClick={handleSignOut}
                         className="w-full flex items-center gap-3 text-left text-sm px-4 py-2 text-black dark:text-white hover:bg-gray-200 smooth dark:hover:bg-indigo-600"
                       >
-                <ArrowLeft  size={19}/>  Sign Out
+                        <ArrowLeft size={19} /> Sign Out
                       </button>
                     </div>
                   )}
