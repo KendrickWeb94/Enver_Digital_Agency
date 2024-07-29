@@ -3,9 +3,6 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/Theme-provider";
 import { ModeToggle } from "@/components/ModeToggle";
 import SideBar from "./components/SideBar";
-{
-  /* import TopBar from "./components/TopBar";*/
-}
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,20 +23,20 @@ export default function RootLayout({
           <main className=" w-full overflow-x-hidden mx-auto">
             <ThemeProvider
               attribute="class"
-              defaultTheme="system"
+              defaultTheme="dark"
               enableSystem
               disableTransitionOnChange
             >
               <div>
-                <div className=" fixed z-50  right-0 bottom-0 m-6 p-3">
-                  <ModeToggle />
-                </div>
-                {/*<TopBar />*/}
+        
+
                 <div className=" flex w-full   dark:bg-black bg-white relative min-h-screen">
                   <div className=" absolute top-0 left-0 right-0 ">
                     <div className=" bg-indigo-500/85 min-w-[150px] blur-[250px] max-w-[350px] h-[200px]"></div>
                   </div>
-                  <SideBar />
+                  <div className="md:p-3">
+                    <SideBar />
+                  </div>
                   {children}
                 </div>
               </div>

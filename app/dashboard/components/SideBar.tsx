@@ -15,6 +15,7 @@ import {
   Settings,
 } from "lucide-react";
 
+
 const SideBar = () => {
   const [user, setUser] = useState<{
     username: string;
@@ -30,7 +31,9 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div className="w-[280px] z-50 h-full">
+   <div className="">
+ 
+     <div className="w-[220px] rounded-md bg-slate-300 dark:bg-[#101010] hidden md:block z-50 h-full">
       <div className="w-full  relative h-full">
         <div className="w-full flex p-3 justify-between">
           <div>
@@ -53,30 +56,24 @@ const SideBar = () => {
             href="/"
             className="hover:text-indigo-600 smooth cursor-pointer flex items-center gap-4"
           >
-            <Home size="20px" />
+            <Home size="17px" />
             <p className=" md:block">Home</p>
           </Link>
           <Link
             href="dashboard/yourprojects"
             className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
           >
-            <LayoutDashboard size="20px" />
+            <LayoutDashboard size="17px" />
             <p className=" md:block">Projects</p>
           </Link>
           <Link
             href="/dashboard"
             className="flex items-center hover:text-indigo-600 smooth cursor-pointer gap-4"
           >
-            <Eye size="20px" />
+            <Eye size="17px" />
             <p className=" md:block">Overview</p>
           </Link>
-          <Link
-            href="dashboard/settings"
-            className="flex hover:text-indigo-600 smooth cursor-pointer items-center gap-4"
-          >
-            <Settings size="20px" />
-            <p className=" md:block">Settings</p>
-          </Link>
+
         </div>
         <div className="px-3 pb-5">
           <Link
@@ -133,6 +130,7 @@ const SideBar = () => {
         )}
       </div>
     </div>
+   </div>
   );
 };
 

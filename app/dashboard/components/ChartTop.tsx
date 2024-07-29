@@ -31,11 +31,12 @@ const chartConfig = {
 
 export function ChartTop() {
   return (
-    <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+  <div className="w-[600px]">
+      <ChartContainer config={chartConfig}>
       <BarChart accessibilityLayer data={chartData}>
-        <CartesianGrid vertical={false} />
+        <CartesianGrid horizontal={false} />
         <XAxis
-          dataKey="month"
+          dataKey="activities"
           tickLine={false}
           tickMargin={10}
           axisLine={false}
@@ -46,5 +47,6 @@ export function ChartTop() {
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
       </BarChart>
     </ChartContainer>
+  </div>
   )
 }
