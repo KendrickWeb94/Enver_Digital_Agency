@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body className={inter.className}>
         <section>
           <main className=" w-full overflow-x-hidden mx-auto">
@@ -28,7 +28,7 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               <div>
-        
+
 
                 <div className=" flex w-full   dark:bg-black bg-white relative min-h-screen">
                   <div className=" absolute top-0 left-0 right-0 ">
